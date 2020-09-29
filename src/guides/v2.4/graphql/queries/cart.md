@@ -109,6 +109,12 @@ The following query shows the status of a cart that is ready to be converted int
       code
     }
     prices {
+    discounts {
+        amount {
+          value
+        }
+        label
+      }
       grand_total {
         value
         currency
@@ -253,6 +259,21 @@ The following query shows the status of a cart that is ready to be converted int
       },
       "applied_coupons": null,
       "prices": {
+      "discounts": [
+              {
+                "label": "cart rule 1",
+                "amount": {
+                  "value": 7.67
+                }
+              },
+              {
+                "label": "cart rule 2",
+                "amount": {
+                  "value": 6.13
+                }
+              }
+            ]
+          }
         "grand_total": {
           "value": 105.26,
           "currency": "USD"
